@@ -23,7 +23,7 @@ import { UserViewComponent } from './user-view/user-view.component';
     BrowserModule, FormsModule,
     RouterModule.forRoot([ // Настройка маршрута
         { path: "todo", component:ToDoListComponent},
-        { path: "click", component: UserViewComponent },
+        { path: "services", component: UserViewComponent },
         { path:"", component: ToDoListComponent }
     ])
   ],
