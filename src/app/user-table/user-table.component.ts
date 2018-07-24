@@ -1,0 +1,21 @@
+import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../users.service';
+
+@Component({
+  selector: 'app-user-table',
+  templateUrl: './user-table.component.html',
+  providers:[UsersService],
+  styleUrls: ['./user-table.component.css']
+})
+export class UserTableComponent implements OnInit {
+
+  public users : Array<any>;
+
+  constructor(public usersService : UsersService) {
+    this.users = usersService.getUsers();
+   }
+
+  ngOnInit() {
+  }
+
+}
