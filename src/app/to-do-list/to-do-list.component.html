@@ -1,0 +1,16 @@
+<div style="text-align:left">
+<h2> Список задач:</h2>
+
+  <div *ngFor = "let task of toDoListService.toDoList">
+    <input type="checkbox" [(ngModel)]="task.isComplated" (change)="toDoListService.saveTasks()" />
+    {{task.task}}
+  </div>
+
+  <br/>
+  <input [(ngModel)] = "newTask">
+  <button (click) = "addTask()">Добавить задачу</button>
+</div>
+
+<br/>
+<h2> Вывод содержимого "toDoListService.toDoList" в формате json:</h2>
+{{toDoListService.toDoList | json}}

@@ -1,26 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<h1 class="project-title">
+             Проект стажировки по Angular 2+
+</h1>
 
-<div style="text-align:center">
+<nav>
+  <a routerLink="/todo" routerLinkActive="active">To Do List</a>
+  <a routerLink="/click" routerLinkActive="active">Click</a>
+  <!-- <a routerLink="" routerLinkActive="active"></a> -->
+</nav>
 
-  <input [(ngModel)] = "newTask">
-  <button (click) = "addTask()">Добавить задачу</button>
 
-  <div *ngFor = "let task of toDoListService.toDoList">
-    <input type="checkbox" [(ngModel)]="task.isComplated" (change)="toDoListService.saveTasks()" />
-    {{task.task}}
-  </div>
-
+<div>
+  <router-outlet></router-outlet>
 </div>
 
-{{toDoListService.toDoList | json}}
 
-<div style="text-align:center">
 
-<app-user-list></app-user-list>
-<app-user-table></app-user-table>
-
-<br/><br/>
-</div>
 
 <!-- <table>
   <tr>
